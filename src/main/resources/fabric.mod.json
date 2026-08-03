@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "neecesmeeses",
+	"version": "${version}",
+	"name": "neece's meeces",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/neecesmeeses/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"github.nicko302.neecesmeeses.NeeceSMeeces"
+		],
+		"client": [
+			"github.nicko302.neecesmeeses.client.NeeceSMeecesClient"
+		],
+		"fabric-datagen": [
+			"github.nicko302.neecesmeeses.client.NeeceSMeecesDataGenerator"
+		]
+	},
+	"mixins": [
+		"neecesmeeses.mixins.json",
+		{
+			"config": "neecesmeeses.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
