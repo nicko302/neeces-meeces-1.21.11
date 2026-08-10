@@ -1,5 +1,6 @@
 package github.nicko302.neecesmeeses;
 
+import github.nicko302.neecesmeeses.init.ItemInit;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -21,7 +22,9 @@ public class NeeceSMeeces implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Loading mod!");
+
+		ItemInit.init();
 	}
 
 	public static Identifier id(String path) {
